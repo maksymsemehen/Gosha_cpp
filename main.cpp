@@ -4,42 +4,40 @@
 using namespace std;
 
 int main() {
-  // Variable overwrite
-  int num = -45;
-  num = 2;
-  cout << "Variable: " << num << endl;
+    // if else
+    int num_if;
+    cout << "Enter a number: ";
+    cin >> num_if;
 
-  num = 3;
-  cout << "Variable: " << num << endl << endl;
+    bool isHappy = true;
+    
+    if (num_if > 3 && isHappy == true) {
+        cout << "Your number is greater than 3 and isHappy == true" << endl;
+        if (num_if != 3) {
+            cout << "Your number is not 3" << endl;
+        }
+    } else if (num_if < 3) {
+        cout << "Your number is less then 3" << endl;
+    } else {
+        cout << "Your number is 3" << endl;
+    }
 
-  // Cin fuuncion
-  int a, b;
-  cout << "Type variable a: ";
-  cin >> a;
-
-  cout << "Type variable b: ";
-  cin >> b;
-
-  cout << "\na = " << a << endl << "b = " << b << endl;
-
-  // Data types
-  // short num1 = -32767; // -32k to 32k / 2 bytes
-  // int num2 = -2147483647; // -2b to 2b / 4 bytes
-  // long num3 = -2147483647; // -2b to 2b / 8 bytes
-
-  // unsigned short int num4 = 65535; // 0 to 65k / 2 bytes
-  // unsigned int num5 = 4294967295; // 0 to 4b / 4 bytes
-  // unsigned long int num6 = 4294967295; // 0 to 4b / 8 bytes
-
-  // Floating point numbers
-  // float num7 = 3.14f; // 4 bytes
-  // double num8 = 123.456f; // 8 bytes
-
-  // Characters
-  // char sym = 'M'; // 1 byte
-
-  // Boolean
-  // bool isHappy = true; // 1 byte
-  
-  return 0;
+    // switch case
+    int num_switch;
+    cout << "\nEnter a number: ";
+    cin >> num_switch;;
+    
+    switch (num_switch) {
+        case 1:
+            cout << "Your number is 1" << endl;
+            break;
+        case 2:
+            cout << "Your number is 2" << endl;
+            break;
+        default:
+            cout << "Your number is not 1 or 2 (default)" << endl;
+            break;
+    }
+    
+    return 0;
 }
