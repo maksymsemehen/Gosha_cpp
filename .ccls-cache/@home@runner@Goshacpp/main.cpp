@@ -4,40 +4,70 @@
 using namespace std;
 
 int main() {
-    // if else
-    int num_if;
-    cout << "Enter a number: ";
-    cin >> num_if;
-
-    bool isHappy = true;
+    // Removes time dependence in the rand() function
+    srand(time(NULL));
     
-    if (num_if > 3 && isHappy == true) {
-        cout << "Your number is greater than 3 and isHappy == true" << endl;
-        if (num_if != 3) {
-            cout << "Your number is not 3" << endl;
-        }
-    } else if (num_if < 3) {
-        cout << "Your number is less then 3" << endl;
-    } else {
-        cout << "Your number is 3" << endl;
+    float num1, num2, res;
+    cout << "Enter a number 1: ";
+    cin >> num1;
+
+    cout << "Enter a number 2: ";
+    cin >> num2;
+
+    char math;
+    cout << "Enter a math symbol: ";
+    cin >> math;
+
+    // if (math == '+') {
+    //     res = num1 + num2;
+    //     cout << "Result: " << res << endl;
+    // } else if (math == '-') {
+    //     res = num1 - num2;
+    //     cout << "Result: " << res << endl;
+    // } else if (math == '*') {
+    //     res = num1 * num2;
+    //     cout << "Result: " << res << endl;
+    // } else if (math == '/') {
+    //     res = num1 / num2;
+    //     cout << "Result: " << res << endl;
+    // }
+
+    switch (math) {
+    case '+':
+        res = num1 + num2;
+        break;
+    case '-':
+        res = num1 - num2;
+        break;
+    case '*':
+        res = num1 * num2;
+        break;
+    case '/':
+        res = num1 / num2;
+        break;
+    default:
+        res = 0;
+        cout << "Invalid math symbol" << endl;
+        break;
     }
 
-    // switch case
-    int num_switch;
-    cout << "\nEnter a number: ";
-    cin >> num_switch;;
-    
-    switch (num_switch) {
-        case 1:
-            cout << "Your number is 1" << endl;
-            break;
-        case 2:
-            cout << "Your number is 2" << endl;
-            break;
-        default:
-            cout << "Your number is not 1 or 2 (default)" << endl;
-            break;
-    }
+    cout << "Result: " << res << endl << endl;
+
+    // Remainder of division
+    int a = 10, b = 3, c;
+    c = a % b;
+    cout << "Remainder of division: " << c << endl;
+
+    // Shortened operations
+    a += 5;
+    a -=5;
+    a--;
+    a++;
+    cout << "Shortened operations: " << a << endl;
+
+    // Random number
+    int randNum = 1 + rand() % 20;
+    cout << "Random number: " << randNum << endl;
     
     return 0;
 }
