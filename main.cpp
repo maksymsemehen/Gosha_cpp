@@ -4,70 +4,54 @@
 using namespace std;
 
 int main() {
-    // Removes time dependence in the rand() function
-    srand(time(NULL));
-    
-    float num1, num2, res;
-    cout << "Enter a number 1: ";
-    cin >> num1;
-
-    cout << "Enter a number 2: ";
-    cin >> num2;
-
-    char math;
-    cout << "Enter a math symbol: ";
-    cin >> math;
-
-    // if (math == '+') {
-    //     res = num1 + num2;
-    //     cout << "Result: " << res << endl;
-    // } else if (math == '-') {
-    //     res = num1 - num2;
-    //     cout << "Result: " << res << endl;
-    // } else if (math == '*') {
-    //     res = num1 * num2;
-    //     cout << "Result: " << res << endl;
-    // } else if (math == '/') {
-    //     res = num1 / num2;
-    //     cout << "Result: " << res << endl;
-    // }
-
-    switch (math) {
-    case '+':
-        res = num1 + num2;
-        break;
-    case '-':
-        res = num1 - num2;
-        break;
-    case '*':
-        res = num1 * num2;
-        break;
-    case '/':
-        res = num1 / num2;
-        break;
-    default:
-        res = 0;
-        cout << "Invalid math symbol" << endl;
-        break;
+    // For
+    for (int i = 0; i < 10; i++) {
+        cout << "El. For: " << i << endl;
     }
 
-    cout << "Result: " << res << endl << endl;
+    // While
+    int j = 0;
+    while (j < 10) {
+        cout << "El. While: " << j << endl;
+        j++;
+    }
 
-    // Remainder of division
-    int a = 10, b = 3, c;
-    c = a % b;
-    cout << "Remainder of division: " << c << endl;
+    // Do while
+    int k = 0;
+    do {
+        cout << "El. Do while: " << k << endl;
+        k++;
+    } while (k < 10);
 
-    // Shortened operations
-    a += 5;
-    a -=5;
-    a--;
-    a++;
-    cout << "Shortened operations: " << a << endl;
+    // Operators in cycles 
+    // Break
+    for (int g = 0; g < 10; g++) {
+        if (g == 5) break;
+        cout << "El. For (break when i = 5): " << g << endl;
+    }
 
-    // Random number
-    int randNum = 1 + rand() % 20;
-    cout << "Random number: " << randNum << endl;
+    // Continue
+    for (int h = 0; h < 10; h++) {
+        if (h % 2 == 0) continue;
+        cout << "El. For (continue when h % 2 = 0: " << h << endl;
+    }
+
+    // Practical example
+    srand(time(NULL));
+    int rand_num = 1 + rand() % 15;
+    bool stop = false;
+    int user_input;
+
+    do {
+        cout << "Enter number: ";
+        cin >> user_input;
+        if (user_input != rand_num)
+            cout << "L" << endl;
+        else
+            stop = true;
+    } while (!stop);
+
+    cout << "W" << endl;
     
     return 0;
 }
