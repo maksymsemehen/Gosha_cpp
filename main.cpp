@@ -1,57 +1,32 @@
 #include <iostream>
-
 // Allows you not to write std::
 using namespace std;
 
 int main() {
-    // For
-    for (int i = 0; i < 10; i++) {
-        cout << "El. For: " << i << endl;
+    // Arrays
+    int nums[3];
+    nums[0] = 56;
+    nums[1] = 563;
+    nums[2] = 2;
+    nums[1] = 4;
+    nums[1]++;
+    cout << nums[1] << endl << endl;
+
+    float nums2[] = {4, 6, 7, 8, 9};
+    for (int i = 0; i < nums2[i]; i++) {
+        cout << "El. " << i << ": " << nums2[i] << endl;
     }
 
-    // While
-    int j = 0;
-    while (j < 10) {
-        cout << "El. While: " << j << endl;
-        j++;
-    }
+    // // Practical task
+    // float numbers[5];
+    // for (int i = 0; i < 5; i++) {
+    //     cout << "Enter number " << i << ": ";
+    //     cin >> numbers[i];
+    // }
 
-    // Do while
-    int k = 0;
-    do {
-        cout << "El. Do while: " << k << endl;
-        k++;
-    } while (k < 10);
+    // for (int i = 0; i < numbers[i]; i++) {
+    //     cout << "El. " << i << ": " << numbers[i] << endl;
+    // }
 
-    // Operators in cycles 
-    // Break
-    for (int g = 0; g < 10; g++) {
-        if (g == 5) break;
-        cout << "El. For (break when i = 5): " << g << endl;
-    }
-
-    // Continue
-    for (int h = 0; h < 10; h++) {
-        if (h % 2 == 0) continue;
-        cout << "El. For (continue when h % 2 = 0: " << h << endl;
-    }
-
-    // Practical example
-    srand(time(NULL));
-    int rand_num = 1 + rand() % 15;
-    bool stop = false;
-    int user_input;
-
-    do {
-        cout << "Enter number: ";
-        cin >> user_input;
-        if (user_input != rand_num)
-            cout << "L" << endl;
-        else
-            stop = true;
-    } while (!stop);
-
-    cout << "W" << endl;
-    
     return 0;
 }
